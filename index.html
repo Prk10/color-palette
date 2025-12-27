@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University AI Hub - 11 Palette Style Guide</title>
+    <style>
+        /* Global Reset & Typography */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 100px; /* Space for fixed nav */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Layout for the Palette Sections */
+        .palette-section {
+            width: 100%;
+            min-height: 90vh; /* Make each section take up most of the screen */
+            padding: 60px 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* The Card Component */
+        .card {
+            width: 100%;
+            max-width: 600px;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .palette-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.6;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        /* Typography */
+        h1 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            line-height: 1.7;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Elements */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            /* Text color is usually white, but overridden inline for light buttons */
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .link {
+            display: inline-block;
+            margin-left: 24px;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+        .link:hover {
+            opacity: 0.7; /* Simple hover for links */
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            padding: 8px 12px;
+            font-size: 0.8rem;
+            border: 1px solid #ccc;
+            background: white;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .nav-btn:hover {
+            background: #000;
+            color: #fff;
+            border-color: #000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section id="p1" class="palette-section" style="background-color: #F8F9FA;">
+        <div class="card" style="background-color: #FFFFFF; color: #212529;">
+            <div class="palette-label">Palette 1: Neural Network</div>
+            <h1>Research & Innovation</h1>
+            <p>The AI Hub serves as the central node for interdisciplinary research. We are bridging the gap between theoretical algorithms and real-world robotics applications.</p>
+            <a href="#" class="btn" style="background-color: #0D6EFD; color: #fff;" 
+               onmouseover="this.style.backgroundColor='#0A58CA'" 
+               onmouseout="this.style.backgroundColor='#0D6EFD'">
+               Explore Projects
+            </a>
+            <a href="#" class="link" style="color: #0D6EFD;">View Documentation &rarr;</a>
+        </div>
+    </section>
+
+    <section id="p2" class="palette-section" style="background-color: #0F172A;">
+        <div class="card" style="background-color: #1E293B; color: #F1F5F9; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            <div class="palette-label">Palette 2: Deep Learning</div>
+            <h1>System Architecture</h1>
+            <p>Analyze high-dimensional data streams in real-time. Our Deep Learning infrastructure supports large-scale model training and inference with minimal latency.</p>
+            <a href="#" class="btn" style="background-color: #6366F1; color: #fff;" 
+               onmouseover="this.style.backgroundColor='#4F46E5'" 
+               onmouseout="this.style.backgroundColor='#6366F1'">
+               Access Terminal
+            </a>
+            <a href="#" class="link" style="color: #6366F1;">System Status &rarr;</a>
+        </div>
+    </section>
+
+    <section id="p3" class="palette-section" style="background-color: #FAFAFA;">
+        <div class="card" style="background-color: #FFFFFF; color: #262626;">
+            <div class="palette-label">Palette 3: Silicon & Copper</div>
+            <h1>Hardware Acceleration</h1>
+            <p>From custom FPGA designs to neuromorphic chips, our lab focuses on the physical substrate of intelligence. Experience the future of embedded AI.</p>
+            <a href="#" class="btn" style="background-color: #EA580C; color: #fff;" 
+               onmouseover="this.style.backgroundColor='#C2410C'" 
+               onmouseout="this.style.backgroundColor='#EA580C'">
+               View Schematics
+            </a>
+            <a href="#" class="link" style="color: #EA580C;">Download Specs &rarr;</a>
+        </div>
+    </section>
+
+    <section id="p4" class="palette-section" style="background-color: #F0FDF4;">
+        <div class="card" style="background-color: #FFFFFF; color: #064E3B;">
+            <div class="palette-label">Palette 4: Ethical AI</div>
+            <h1>Sustainable Intelligence</h1>
+            <p>Developing algorithms that are not only powerful but energy-efficient and ethically aligned. We prioritize social impact in every line of code.</p>
+            <a href="#" class="btn" style="background-color: #10B981; color: #fff;" 
+               onmouseover="this.style.backgroundColor='#059669'" 
+               onmouseout="this.style.backgroundColor='#10B981'">
+               Read Manifesto
+            </a>
+            <a href="#" class="link" style="color: #10B981;">Join the Initiative &rarr;</a>
+        </div>
+    </section>
+
+    <section id="p5" class="palette-section" style="background-color: #121212;">
+        <div class="card" style="background-color: #2D2D2D; color: #EDEDED; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            <div class="palette-label">Palette 5: Cyber-Academic</div>
+            <h1>Future Interfaces</h1>
+            <p>Pushing the boundaries of Human-Computer Interaction. We explore VR, AR, and BCI technologies to merge the digital and physical worlds.</p>
+            <a href="#" class="btn" style="background-color: #7B2CBF; color: #fff;" 
+               onmouseover="this.style.backgroundColor='#5A189A'" 
+               onmouseout="this.style.backgroundColor='#7B2CBF'">
+               Launch Demo
+            </a>
+            <a href="#" class="link" style="color: #7B2CBF;">View Protocols &rarr;</a>
+        </div>
+    </section>
+
+    <section id="p6" class="palette-section" style="background-color: #F8FAFC;">
+        <div class="card" style="background-color: #FFFFFF; color: #334155; border: 1px solid #e2e8f0;">
+            <div class="palette-label">Palette 6: Glass Laboratory</div>
+            <h1 style="color: #000E8F;">Advanced Robotics</h1>
+            <p>Precision engineering meets adaptive learning. Our autonomous systems are designed for unstructured environments and complex decision making.</p>
+            <a href="#" class="btn" style="background-color: #000E8F; color: #fff;" 
+               onmouseover="this.style.backgroundColor='#38BDF8'" 
+               onmouseout="this.style.backgroundColor='#000E8F'">
+               Start Simulation
+            </a>
+            <a href="#" class="link" style="color: #000E8F;">Lab Access &rarr;</a>
+        </div>
+    </section>
+
+    <section id="p7" class="palette-section" style="background-color: #050505;">
+        <div class="card" style="background-color: #141414; color: #EAEAEA; border: 1px solid #333;">
+            <div class="palette-label" style="color: #00FF94;">Palette 7: Electric Void</div>
+            <h1>Generative Code</h1>
+            <p>A stark, high-performance environment for developers. The pure black background reduces eye strain while neon accents highlight critical data paths.</p>
+            <a href="#" class="btn" style="background-color: #00FF94; color: #000;" 
+               onmouseover="this.style.backgroundColor='#00CC76'" 
+               onmouseout="this.style.backgroundColor='#00FF94'">
+               Compile Source
+            </a>
+            <a href="#" class="link" style="color: #00FF94;">Git Repository &rarr;</a>
+        </div>
+    </section>
+
+    <section id="p8" class="palette-section" style="background-color: #041C1C;">
+        <div class="card" style="background-color: #0D3B3B; color: #D1FAE5; box-shadow: 0 10px 40px rgba(0,255,200,0.05);">
+            <div class="palette-label">Palette 8: Bioluminescence</div>
+            <h1>Fluid Dynamics</h1>
+            <p>Inspired by nature, powered by silicon. This palette uses deep teal and aqua to represent the flow of data in complex neural networks.</p>
+            <a href="#" class="btn" style="background-color: #2DD4BF; color: #002222;" 
+               onmouseover="this.style.backgroundColor='#14B8A6'" 
+               onmouseout="this.style.backgroundColor='#2DD4BF'">
+               Analyze Flow
+            </a>
+            <a href="#" class="link" style="color: #5EEAD4;">Data Stream &rarr;</a>
+        </div>
+    </section>
+
+    <section id="p9" class="palette-section" style="background-color: #2B1B17;">
+        <div class="card" style="background-color: #3E2723; color: #FFCCBC; border: 1px solid #5D4037;">
+            <div class="palette-label" style="color: #FF7043;">Palette 9: Mars Colony</div>
+            <h1>Autonomous Rovers</h1>
+            <p>Built for resilience. This warm, earthy industrial palette evokes the dusty environments our rugged exploration bots are designed to conquer.</p>
+            <a href="#" class="btn" style="background-color: #FF5722; color: #fff;" 
+               onmouseover="this.style.backgroundColor='#E64A19'" 
+               onmouseout="this.style.backgroundColor='#FF5722'">
+               Initialize Drive
+            </a>
+            <a href="#" class="link" style="color: #FFAB91;">Telemetry Logs &rarr;</a>
+        </div>
+    </section>
+
+    <section id="p10" class="palette-section" style="background-color: #101014;">
+        <div class="card" style="background-color: #1C1C24; color: #E0E0FF; border-top: 4px solid #6C63FF;">
+            <div class="palette-label" style="color: #8F88FF;">Palette 10: Holographic</div>
+            <h1>Virtual Sim</h1>
+            <p>Immersive interfaces for a new reality. We use deep indigo backgrounds to let content float, creating a sense of depth and spatial computing.</p>
+            <a href="#" class="btn" style="background-color: #6C63FF; color: #fff;" 
+               onmouseover="this.style.backgroundColor='#5146D9'" 
+               onmouseout="this.style.backgroundColor='#6C63FF'">
+               Enter VR
+            </a>
+            <a href="#" class="link" style="color: #8F88FF;">Connect Headset &rarr;</a>
+        </div>
+    </section>
+
+    <section id="p11" class="palette-section" style="background-color: #E5E5E5;">
+        <div class="card" style="background-color: #F5F5F5; color: #171717; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            <div class="palette-label">Palette 11: Clean Slate</div>
+            <h1>Precision Tech</h1>
+            <p>Zero distractions. This monochromatic palette focuses entirely on the content, perfect for reading academic papers or reviewing code snippets.</p>
+            <a href="#" class="btn" style="background-color: #171717; color: #fff;" 
+               onmouseover="this.style.backgroundColor='#333333'" 
+               onmouseout="this.style.backgroundColor='#171717'">
+               Review Paper
+            </a>
+            <a href="#" class="link" style="color: #171717;">Download PDF &rarr;</a>
+        </div>
+    </section>
+
+    <nav class="nav-bar">
+        <a href="#p1" class="nav-btn">1. Neural</a>
+        <a href="#p2" class="nav-btn">2. Deep</a>
+        <a href="#p3" class="nav-btn">3. Silicon</a>
+        <a href="#p4" class="nav-btn">4. Ethical</a>
+        <a href="#p5" class="nav-btn">5. Cyber</a>
+        <a href="#p6" class="nav-btn">6. Glass</a>
+        <a href="#p7" class="nav-btn">7. Electric</a>
+        <a href="#p8" class="nav-btn">8. Bio</a>
+        <a href="#p9" class="nav-btn">9. Mars</a>
+        <a href="#p10" class="nav-btn">10. Holo</a>
+        <a href="#p11" class="nav-btn">11. Slate</a>
+    </nav>
+
+</body>
+</html>
